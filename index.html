@@ -58,8 +58,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1rem;padding-left:4rem}
 .stat-card{background:var(--surface);border:1px solid var(--border);padding:1.2rem 1.5rem;position:relative;overflow:hidden;animation:fadeR .6s ease both}
 .stat-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
-.stat-card:nth-child(2)::before{background:var(--accent2)}
-.stat-card:nth-child(3)::before{background:var(--accent3)}
+.stat-card:nth-child(2):before{background:var(--accent2)}
+.stat-card:nth-child(3):before{background:var(--accent3)}
 .stat-card:nth-child(1){animation-delay:.3s}.stat-card:nth-child(2){animation-delay:.4s}.stat-card:nth-child(3){animation-delay:.5s}.stat-card:nth-child(4){animation-delay:.6s}
 .stat-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1}
 .stat-num span{color:var(--accent)}
@@ -274,7 +274,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
 <nav>
   <div class="nav-logo">SK<span>.</span>SECURITY</div>
   <ul class="nav-links">
@@ -291,7 +290,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </button>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#experience" onclick="closeMobile()">Experience</a>
@@ -302,7 +300,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   <a href="#" onclick="closeMobile();openAuth();return false;" style="color:var(--accent2)">⚙ Admin Login</a>
 </div>
 
-<!-- ═══ HERO ═══ -->
 <div class="hero" id="about">
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
@@ -324,7 +321,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
-<!-- ═══ EXPERIENCE ═══ -->
 <section id="experience">
   <div class="sec-hdr"><span class="sec-num">01.</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
   <div class="exp-grid">
@@ -371,7 +367,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ SKILLS ═══ -->
 <section id="skills">
   <div class="sec-hdr"><span class="sec-num">02.</span><h2 class="sec-title">Skills</h2><div class="sec-line"></div></div>
   <div class="skills-grid">
@@ -383,7 +378,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ PROJECTS ═══ -->
 <section id="projects">
   <div class="sec-hdr"><span class="sec-num">03.</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
   <div class="proj-grid">
@@ -394,7 +388,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ ACHIEVEMENTS ═══ -->
 <section id="achievements">
   <div class="sec-hdr"><span class="sec-num">04.</span><h2 class="sec-title">Achievements</h2><div class="sec-line"></div></div>
   <div class="ach-grid">
@@ -408,7 +401,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ CERTIFICATIONS ═══ -->
 <section id="certifications">
   <div class="sec-hdr"><span class="sec-num">05.</span><h2 class="sec-title">Certifications</h2><div class="sec-line"></div></div>
   <div class="cert-grid">
@@ -419,7 +411,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ PUBLICATIONS ═══ -->
 <section id="publications">
   <div class="sec-hdr"><span class="sec-num">06.</span><h2 class="sec-title">Publications &amp; Patent</h2><div class="sec-line"></div></div>
   <div class="pub-list">
@@ -431,7 +422,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ VIDEOS ═══ -->
 <div id="videos-section">
   <div class="inner">
     <div class="sec-hdr"><span class="sec-num">07.</span><h2 class="sec-title">Videos</h2><div class="sec-line"></div></div>
@@ -489,7 +479,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
-<!-- ═══ ARTICLES ═══ -->
 <div id="articles-section">
   <div class="inner">
     <div class="sec-hdr"><span class="sec-num">08.</span><h2 class="sec-title">Articles</h2><div class="sec-line"></div></div>
@@ -534,7 +523,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
-<!-- ═══ CONTACT ═══ -->
 <section id="contact">
   <div class="sec-hdr"><span class="sec-num">09.</span><h2 class="sec-title">Contact</h2><div class="sec-line"></div></div>
   <div class="contact-grid">
@@ -545,13 +533,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
   <div>© 2026 <span class="footer-ac">Shubham Kolaskar</span> — All rights reserved</div>
   <div class="footer-ac">B.Tech Cybersecurity · University of Mumbai</div>
 </footer>
 
-<!-- ═══ ARTICLE MODAL ═══ -->
 <div class="modal-overlay" id="articleModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('articleModal')">✕</button>
@@ -562,7 +548,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
-<!-- ═══ VIDEO MODAL (fullscreen player) ═══ -->
 <div class="video-modal-overlay" id="videoModal" onclick="closeVideoModal(event)">
   <div class="video-modal-inner">
     <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
@@ -570,233 +555,191 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-box">
+    <button class="auth-close" onclick="closeAuth()">✕</button>
+    <div class="auth-title">Admin Login</div>
+    <div class="auth-sub">// Authenticate via Firebase</div>
+    <input class="auth-input" type="password" id="authPwd" placeholder="Password…" onkeydown="if(event.key==='Enter')checkAuth()"/>
+    <div class="auth-err" id="authErr"></div>
+    <button class="btn-p" style="width:100%" onclick="checkAuth()">Authenticate →</button>
+  </div>
+</div>
 
-<script>
-
+<script type="module">
 // ══════════════════════════════════════════
-// VIDEOS
+// FIREBASE CONFIGURATION & INITIALIZATION
 // ══════════════════════════════════════════
-function toggleVideoInput(){
-  const type = document.getElementById('vidType').value;
-  document.getElementById('vidUrlField').style.display = type==='direct'?'none':'flex';
-  document.getElementById('vidDirectField').style.display = type==='direct'?'flex':'none';
-}
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
+import { getFirestore, collection, getDocs, doc, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
-function getEmbedUrl(type, raw){
-  raw = raw.trim();
-  if(type==='youtube'){
-    // extract ID from various YouTube URL formats
-    let id = raw;
-    const m = raw.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([a-zA-Z0-9_-]{11})/);
-    if(m) id = m[1];
-    return `https://www.youtube.com/embed/${id}?autoplay=1`;
+const firebaseConfig = {
+  apiKey: "AIzaSyAZaBjNh0tsajE7_avOpOLpFldqRz7xYFM",
+  authDomain: "shubham-portfolio-db.firebaseapp.com",
+  projectId: "shubham-portfolio-db",
+  storageBucket: "shubham-portfolio-db.firebasestorage.app",
+  messagingSenderId: "437914625180",
+  appId: "1:437914625180:web:602f14c427f4d3bf773959"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// ── State ──
+window.isAdmin = false;
+window.articles = [];
+window.videos = [];
+
+// ── UI Toggles ──
+window.toggleMobile = () => { document.getElementById('mobileMenu').classList.toggle('open'); document.getElementById('hamburger').classList.toggle('open'); };
+window.closeMobile = () => { document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('hamburger').classList.remove('open'); };
+window.openAuth = (show=true) => { document.getElementById('authOverlay').classList[show?'add':'remove']('open'); if(show) setTimeout(()=>document.getElementById('authPwd').focus(),100); };
+window.closeAuth = () => { document.getElementById('authOverlay').classList.remove('open'); document.getElementById('authPwd').value=''; document.getElementById('authErr').textContent=''; };
+window.toggleVideoForm = () => { const f=document.getElementById('videoForm'); f.classList.toggle('open'); document.getElementById('addVideoBtn').textContent = f.classList.contains('open') ? '✕ Cancel' : '+ Add Video'; };
+window.toggleArticleForm = () => { const f=document.getElementById('articleForm'); f.classList.toggle('open'); document.getElementById('addArticleBtn').textContent = f.classList.contains('open') ? '✕ Cancel' : '+ Publish Article'; };
+window.closeModal = (id) => { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; };
+
+// ── Authentication ──
+window.checkAuth = async () => {
+  const pwd = document.getElementById('authPwd').value;
+  // Hardcoded email so you only need to type your password
+  const email = "shubhamkolaskar2004@gmail.com"; 
+  try {
+    await signInWithEmailAndPassword(auth, email, pwd);
+    window.closeAuth();
+  } catch(e) {
+    document.getElementById('authErr').textContent = '✗ Invalid credentials';
   }
-  if(type==='vimeo'){
-    let id = raw;
-    const m = raw.match(/vimeo\.com\/(\d+)/);
-    if(m) id = m[1];
-    return `https://player.vimeo.com/video/${id}?autoplay=1`;
+};
+
+window.logout = async () => { await signOut(auth); };
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.isAdmin = true;
+    document.body.classList.add('admin-mode');
+    ['videoAdminBar','artAdminBar'].forEach(id=>document.getElementById(id).classList.add('visible'));
+    ['addVideoBtn','addArticleBtn'].forEach(id=>document.getElementById(id).classList.remove('hidden'));
+  } else {
+    window.isAdmin = false;
+    document.body.classList.remove('admin-mode');
+    ['videoAdminBar','artAdminBar'].forEach(id=>document.getElementById(id).classList.remove('visible'));
+    ['addVideoBtn','addArticleBtn'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+    document.getElementById('videoForm').classList.remove('open');
+    document.getElementById('articleForm').classList.remove('open');
   }
-  return raw; // direct
-}
+});
 
-function getThumbnailUrl(type, raw){
-  raw = raw.trim();
-  if(type==='youtube'){
-    let id = raw;
-    const m = raw.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([a-zA-Z0-9_-]{11})/);
-    if(m) id = m[1];
-    return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+// ── Database Operations ──
+async function fetchContent() {
+  try {
+    const vidSnap = await getDocs(collection(db, "sk_videos"));
+    window.videos = vidSnap.docs.map(d => d.data()).sort((a,b) => b.id - a.id);
+    window.renderVideos();
+
+    const artSnap = await getDocs(collection(db, "sk_articles"));
+    window.articles = artSnap.docs.map(d => d.data()).sort((a,b) => b.id - a.id);
+    window.renderArticles();
+  } catch (e) {
+    console.error("Error fetching data: ", e);
   }
-  return null; // vimeo & direct: no easy thumbnail
 }
 
-function toggleVideoForm(){
-  const f=document.getElementById('videoForm');
-  f.classList.toggle('open');
-  document.getElementById('addVideoBtn').textContent = f.classList.contains('open') ? '✕ Cancel' : '+ Add Video';
-}
-
-function addVideo(){
+window.addVideo = async () => {
   const title = document.getElementById('vidTitle').value.trim();
   const type  = document.getElementById('vidType').value;
   const raw   = type==='direct' ? document.getElementById('vidDirect').value.trim() : document.getElementById('vidUrl').value.trim();
   if(!title || !raw){ alert('Title and video URL are required.'); return; }
 
+  let embedUrl = raw; let thumbUrl = null;
+  if(type==='youtube'){
+    let id = raw; const m = raw.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([a-zA-Z0-9_-]{11})/);
+    if(m) id = m[1]; embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`; thumbUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+  } else if(type==='vimeo'){
+    let id = raw; const m = raw.match(/vimeo\.com\/(\d+)/);
+    if(m) id = m[1]; embedUrl = `https://player.vimeo.com/video/${id}?autoplay=1`;
+  }
+
   const video = {
-    id: Date.now(),
-    title,
-    category: document.getElementById('vidCat').value,
-    description: document.getElementById('vidDesc').value.trim(),
-    type,
-    raw,
-    embedUrl: getEmbedUrl(type, raw),
-    thumbUrl: getThumbnailUrl(type, raw),
+    id: Date.now(), title, category: document.getElementById('vidCat').value,
+    description: document.getElementById('vidDesc').value.trim(), type, raw, embedUrl, thumbUrl,
     date: new Date().toLocaleDateString('en-IN',{year:'numeric',month:'long',day:'numeric'})
   };
-  videos.unshift(video);
-  save('sk_videos', videos);
-  renderVideos();
-  // reset
-  document.getElementById('vidTitle').value='';
-  document.getElementById('vidUrl').value='';
-  document.getElementById('vidDirect').value='';
-  document.getElementById('vidDesc').value='';
-  toggleVideoForm();
-}
 
-function deleteVideo(id){
+  await setDoc(doc(db, "sk_videos", video.id.toString()), video);
+  window.videos.unshift(video);
+  window.renderVideos();
+  window.toggleVideoForm();
+};
+
+window.deleteVideo = async (id) => {
   if(!confirm('Delete this video?')) return;
-  videos = videos.filter(v=>v.id!==id);
-  save('sk_videos', videos);
-  renderVideos();
-}
+  await deleteDoc(doc(db, "sk_videos", id.toString()));
+  window.videos = window.videos.filter(v=>v.id!==id);
+  window.renderVideos();
+};
 
-function playVideo(embedUrl){
-  document.getElementById('videoFrame').src = embedUrl;
-  document.getElementById('videoModal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeVideoModal(e){
-  if(e && e.target!==document.getElementById('videoModal') && e.target!==document.querySelector('.video-modal-close')) return;
-  document.getElementById('videoFrame').src='';
-  document.getElementById('videoModal').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function renderVideos(){
-  const grid = document.getElementById('videosGrid');
-  if(videos.length===0){
-    grid.innerHTML='';
-    grid.appendChild(document.getElementById('noVideos'));
-    document.getElementById('noVideos').style.display='block';
-    return;
-  }
-  grid.innerHTML='';
-  videos.forEach(v=>{
-    const card=document.createElement('div');
-    card.className='video-card';
-    const thumbHtml = v.thumbUrl
-      ? `<img class="video-thumb-img" src="${v.thumbUrl}" alt="${v.title}" loading="lazy"/>`
-      : `<div style="position:absolute;inset:0;background:linear-gradient(135deg,#0c1318,#1e2f3a);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.1em">VIDEO</div>`;
-    card.innerHTML=`
-      <div class="video-thumb" onclick="playVideo('${v.embedUrl.replace(/'/g,"\\'")}')">
-        ${thumbHtml}
-        <div class="video-play-overlay">
-          <div class="play-btn">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info">
-        <div class="video-meta">
-          <span class="video-cat">${v.category}</span>
-          <span class="video-date">${v.date}</span>
-        </div>
-        <div class="video-ttl">${v.title}</div>
-        ${v.description?`<div class="video-desc">${v.description}</div>`:''}
-      </div>
-      <div class="video-card-actions">
-        <button class="video-del-btn" onclick="deleteVideo(${v.id})">Delete</button>
-      </div>`;
-    grid.appendChild(card);
-  });
-}
-
-// ══════════════════════════════════════════
-// ARTICLES
-// ══════════════════════════════════════════
-function toggleArticleForm(){
-  const f=document.getElementById('articleForm');
-  f.classList.toggle('open');
-  document.getElementById('addArticleBtn').textContent = f.classList.contains('open') ? '✕ Cancel' : '+ Publish Article';
-}
-
-function publishArticle(){
+window.publishArticle = async () => {
   const title = document.getElementById('artTitle').value.trim();
   const body  = document.getElementById('artBody').value.trim();
   if(!title||!body){ alert('Title and content are required.'); return; }
+  
   const art = {
-    id: Date.now(),
-    title,
-    category: document.getElementById('artCat').value,
-    excerpt: document.getElementById('artExcerpt').value.trim() || body.substring(0,130)+'…',
-    body,
+    id: Date.now(), title, category: document.getElementById('artCat').value,
+    excerpt: document.getElementById('artExcerpt').value.trim() || body.substring(0,130)+'…', body,
     date: new Date().toLocaleDateString('en-IN',{year:'numeric',month:'long',day:'numeric'})
   };
-  articles.unshift(art);
-  save('sk_articles', articles);
-  renderArticles();
-  document.getElementById('artTitle').value='';
-  document.getElementById('artExcerpt').value='';
-  document.getElementById('artBody').value='';
-  toggleArticleForm();
-}
 
-function deleteArticle(id){
+  await setDoc(doc(db, "sk_articles", art.id.toString()), art);
+  window.articles.unshift(art);
+  window.renderArticles();
+  window.toggleArticleForm();
+};
+
+window.deleteArticle = async (id) => {
   if(!confirm('Delete this article?')) return;
-  articles = articles.filter(a=>a.id!==id);
-  save('sk_articles', articles);
-  renderArticles();
-}
+  await deleteDoc(doc(db, "sk_articles", id.toString()));
+  window.articles = window.articles.filter(a=>a.id!==id);
+  window.renderArticles();
+};
 
-function openArticle(id){
-  const art=articles.find(a=>a.id===id);
-  if(!art) return;
-  document.getElementById('modalCat').textContent=art.category;
-  document.getElementById('modalTitle').textContent=art.title;
-  document.getElementById('modalDate').textContent=art.date;
-  document.getElementById('modalBody').textContent=art.body;
-  document.getElementById('articleModal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeModal(id){
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function renderArticles(){
-  const grid=document.getElementById('articlesGrid');
-  if(articles.length===0){
-    grid.innerHTML='';
-    grid.appendChild(document.getElementById('noArticles'));
-    document.getElementById('noArticles').style.display='block';
-    return;
-  }
+// ── Rendering Functions ──
+window.renderVideos = () => {
+  const grid = document.getElementById('videosGrid');
+  if(window.videos.length===0){ grid.innerHTML=''; grid.appendChild(document.getElementById('noVideos')); document.getElementById('noVideos').style.display='block'; return; }
   grid.innerHTML='';
-  articles.forEach(a=>{
-    const card=document.createElement('div');
-    card.className='article-card';
-    card.innerHTML=`
-      <div class="art-meta">
-        <span class="art-cat">${a.category}</span>
-        <span class="art-date">${a.date}</span>
-      </div>
-      <div class="art-ttl">${a.title}</div>
-      <div class="art-exc">${a.excerpt}</div>
-      <div class="art-card-btns">
-        <button class="art-read" onclick="openArticle(${a.id})">Read more →</button>
-        <button class="art-del-btn" onclick="deleteArticle(${a.id})">Delete</button>
-      </div>`;
+  window.videos.forEach(v=>{
+    const card=document.createElement('div'); card.className='video-card';
+    const thumbHtml = v.thumbUrl ? `<img class="video-thumb-img" src="${v.thumbUrl}" alt="${v.title}" loading="lazy"/>` : `<div style="position:absolute;inset:0;background:linear-gradient(135deg,#0c1318,#1e2f3a);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.1em">VIDEO</div>`;
+    card.innerHTML=`<div class="video-thumb" onclick="playVideo('${v.embedUrl.replace(/'/g,"\\'")}')">${thumbHtml}<div class="video-play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div></div><div class="video-info"><div class="video-meta"><span class="video-cat">${v.category}</span><span class="video-date">${v.date}</span></div><div class="video-ttl">${v.title}</div>${v.description?`<div class="video-desc">${v.description}</div>`:''}</div><div class="video-card-actions"><button class="video-del-btn" onclick="deleteVideo(${v.id})">Delete</button></div>`;
     grid.appendChild(card);
   });
-}
+};
 
-// ── Modal close on overlay click ──
-document.getElementById('articleModal').addEventListener('click',function(e){ if(e.target===this) closeModal('articleModal'); });
-document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeModal('articleModal'); closeVideoModal(); closeAuth(); } });
+window.renderArticles = () => {
+  const grid=document.getElementById('articlesGrid');
+  if(window.articles.length===0){ grid.innerHTML=''; grid.appendChild(document.getElementById('noArticles')); document.getElementById('noArticles').style.display='block'; return; }
+  grid.innerHTML='';
+  window.articles.forEach(a=>{
+    const card=document.createElement('div'); card.className='article-card';
+    card.innerHTML=`<div class="art-meta"><span class="art-cat">${a.category}</span><span class="art-date">${a.date}</span></div><div class="art-ttl">${a.title}</div><div class="art-exc">${a.excerpt}</div><div class="art-card-btns"><button class="art-read" onclick="openArticle(${a.id})">Read more →</button><button class="art-del-btn" onclick="deleteArticle(${a.id})">Delete</button></div>`;
+    grid.appendChild(card);
+  });
+};
 
-// ── Init ──
-(function(){
-  const savedVids = load('sk_videos');
-  if(savedVids) videos = savedVids;
-  const savedArts = load('sk_articles');
-  if(savedArts) articles = savedArts;
-  renderVideos();
-  renderArticles();
-})();
+// ── Modals & Video Players ──
+window.toggleVideoInput = () => { const type = document.getElementById('vidType').value; document.getElementById('vidUrlField').style.display = type==='direct'?'none':'flex'; document.getElementById('vidDirectField').style.display = type==='direct'?'flex':'none'; };
+window.playVideo = (embedUrl) => { document.getElementById('videoFrame').src = embedUrl; document.getElementById('videoModal').classList.add('open'); document.body.style.overflow='hidden'; };
+window.closeVideoModal = (e) => { if(e && e.target!==document.getElementById('videoModal') && e.target!==document.querySelector('.video-modal-close')) return; document.getElementById('videoFrame').src=''; document.getElementById('videoModal').classList.remove('open'); document.body.style.overflow=''; };
+window.openArticle = (id) => { const art=window.articles.find(a=>a.id===id); if(!art) return; document.getElementById('modalCat').textContent=art.category; document.getElementById('modalTitle').textContent=art.title; document.getElementById('modalDate').textContent=art.date; document.getElementById('modalBody').textContent=art.body; document.getElementById('articleModal').classList.add('open'); document.body.style.overflow='hidden'; };
+
+document.getElementById('articleModal').addEventListener('click',function(e){ if(e.target===this) window.closeModal('articleModal'); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ window.closeModal('articleModal'); window.closeVideoModal(); window.closeAuth(); } });
+
+// Load data on start
+fetchContent();
 </script>
 </body>
 </html>
