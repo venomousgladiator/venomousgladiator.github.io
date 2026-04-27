@@ -570,71 +570,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   </div>
 </div>
 
-<!-- ═══ AUTH MODAL ═══ -->
-<div class="auth-overlay" id="authOverlay">
-  <div class="auth-box">
-    <button class="auth-close" onclick="closeAuth()">✕</button>
-    <div class="auth-title">Admin Login</div>
-    <div class="auth-sub">// Enter password to manage content</div>
-    <input class="auth-input" type="password" id="authPwd" placeholder="Password…" onkeydown="if(event.key==='Enter')checkAuth()"/>
-    <div class="auth-err" id="authErr"></div>
-    <button class="btn-p" style="width:100%" onclick="checkAuth()">Authenticate →</button>
-  </div>
-</div>
 
 <script>
-// ══════════════════════════════════════════
-// CONFIG — change this password before deploy
-// ══════════════════════════════════════════
-const ADMIN_PASSWORD = 'shubham@sec2024'; // ← CHANGE THIS
-
-// ── State ──
-let isAdmin = false;
-let articles = [];
-let videos = [];
-let currentArticleIdx = null;
-
-// ── Persist ──
-function save(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){} }
-function load(key){ try{ const v=localStorage.getItem(key); return v?JSON.parse(v):null; }catch(e){ return null; } }
-
-// ── Mobile nav ──
-function toggleMobile(){
-  const m=document.getElementById('mobileMenu');
-  const h=document.getElementById('hamburger');
-  m.classList.toggle('open');
-  h.classList.toggle('open');
-}
-function closeMobile(){
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
-}
-
-// ── Admin auth ──
-function openAuth(){ document.getElementById('authOverlay').classList.add('open'); setTimeout(()=>document.getElementById('authPwd').focus(),100); }
-function closeAuth(){ document.getElementById('authOverlay').classList.remove('open'); document.getElementById('authPwd').value=''; document.getElementById('authErr').textContent=''; }
-function checkAuth(){
-  const pwd = document.getElementById('authPwd').value;
-  if(pwd === ADMIN_PASSWORD){
-    isAdmin = true;
-    document.body.classList.add('admin-mode');
-    ['videoAdminBar','artAdminBar'].forEach(id=>document.getElementById(id).classList.add('visible'));
-    ['addVideoBtn','addArticleBtn'].forEach(id=>document.getElementById(id).classList.remove('hidden'));
-    closeAuth();
-  } else {
-    document.getElementById('authErr').textContent = '✗ Incorrect password';
-    document.getElementById('authPwd').value='';
-  }
-}
-function logout(){
-  isAdmin = false;
-  document.body.classList.remove('admin-mode');
-  ['videoAdminBar','artAdminBar'].forEach(id=>document.getElementById(id).classList.remove('visible'));
-  ['addVideoBtn','addArticleBtn'].forEach(id=>document.getElementById(id).classList.add('hidden'));
-  // close forms if open
-  document.getElementById('videoForm').classList.remove('open');
-  document.getElementById('articleForm').classList.remove('open');
-}
 
 // ══════════════════════════════════════════
 // VIDEOS
