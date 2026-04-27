@@ -80,6 +80,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
   opacity: 0.85;
   animation: fadeR .6s ease both;
   filter: drop-shadow(0 0 20px rgba(127, 85, 255, 0.2));
+  will-change: transform;
+  transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ── SECTIONS ── */
@@ -765,6 +767,25 @@ window.openArticle = (id) => { const art=window.articles.find(a=>a.id===id); if(
 
 document.getElementById('articleModal').addEventListener('click',function(e){ if(e.target===this) window.closeModal('articleModal'); });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ window.closeModal('articleModal'); window.closeVideoModal(); window.closeAuth(); } });
+
+// ── Smooth Parallax Effect ──
+window.addEventListener('scroll', () => {
+  window.requestAnimationFrame(() => {
+    const scrolled = window.scrollY;
+    
+    // 1. Move the background grid down slightly (Deepest layer)
+    const gridBg = document.querySelector('.hero-grid-bg');
+    if (gridBg) gridBg.style.transform = `translateY(${scrolled * 0.35}px)`;
+    
+    // 2. Move the background glow (Middle layer)
+    const glow = document.querySelector('.hero-glow');
+    if (glow) glow.style.transform = `translate(-50%, calc(-50% + ${scrolled * 0.2}px))`;
+    
+    // 3. Make the cybernetic head float slightly (Foreground layer)
+    const avatar = document.querySelector('.hero-avatar');
+    if (avatar) avatar.style.transform = `translateY(${scrolled * -0.1}px)`;
+  });
+});
 
 // Load data on start
 fetchContent();
